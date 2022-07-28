@@ -1,0 +1,6 @@
+.flash-cards-nav-bar{
+    display: "flex";
+    justify-content: right;
+    align-items: right;
+    height: "100vh",
+}
