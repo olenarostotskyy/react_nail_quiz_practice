@@ -1,7 +1,7 @@
 import React from "react";
 import "./flashCards.css";
 
-const FleshCards = () => {
+const FlashCards = () => {
   return (
     <div className="flash-cards-nav-bar">
       <h1>flash cards</h1>
@@ -9,4 +9,4 @@ const FleshCards = () => {
   );
 };
 
-export default FleshCards;
+export default FlashCards;
