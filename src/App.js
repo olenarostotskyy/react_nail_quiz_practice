@@ -9,6 +9,8 @@ import SignUp from "./pages/signUp";
 import Footer from "./components/Footer";
 import Test from "./pages/Test";
 
+const apiUrl = "http://127.0.0.1:5000/questions";
+
 function App() {
   return (
     <div>
