@@ -17,6 +17,13 @@
     height: 80px;
     max-width: 1500px;
   }
+  .navbar-container i{
+      margin-left: 4px;
+      padding: 3px;
+      
+      /* height: 2px;
+      width: 0.8em; */
+  }
   
   .navbar-logo {
     color: #fff;
