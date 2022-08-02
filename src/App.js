@@ -8,8 +8,9 @@ import FlashCards from "./pages/flashCards";
 import SignUp from "./pages/signUp";
 import Footer from "./components/Footer";
 import Test from "./pages/Test";
+import Quiz from "./pages/Quiz";
 
-const apiUrl = "http://127.0.0.1:5000/questions";
+// const apiUrl = "http://127.0.0.1:5000/questions";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/flash-cards" element={<FlashCards />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/test" element={<Test />} />
+            <Route path="/quiz" element={<Quiz />} />
           </Routes>
           <Footer />
         </Router>

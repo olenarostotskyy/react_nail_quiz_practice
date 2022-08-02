@@ -1,29 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Test.css";
+import Quiz from "./Quiz";
+// import axios from "axios";
+
+const ApiUrl = "http://127.0.0.1:5000/questions";
 
 const Test = () => {
-  return (
+  const [questionsData, setQuestions] = useState(null);
+  // const [index, Updateindex] = useState(0);
+  useEffect(() => {
+    fetch(ApiUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        setQuestions(data);
+        console.log(data);
+      });
+  }, []);
+
+  // const getQuestionsFromAPI = () => {
+  //   axios
+  //     .get("http://127.0.0.1:5000/questions")
+  //     .then((response) => {
+  //       setQuestions(response.data);
+  //       console.log(response);
+  //     })
+  //     .catch((error) => {
+  //       console.log("Can't get questions", error);
+  //     });
+  // };
+
+  return questionsData !== null ? (
     <div className="test-container">
-      <div className="answers-row">
-        <div className="test-question">
-          <h1>Test questions</h1>
-        </div>
-        <div className="test-answers-col">
-          <div className="test-answ">
-            answer 1 hfhfhhfhfhfhfhfhfhhfhfhhfhfhhhhhhhhhhhhhhhhhhhhhhhhhhh
-          </div>
-          <div className="test-answ">answer 2</div>
-        </div>
-        <div className="test-answers-col">
-          <div className="test-answ">answer 3</div>
-          <div className="test-answ">answer 4</div>
-        </div>
-      </div>
-      <div className="buttons">
-        <button>previous</button>
-        <button>next</button>
-      </div>
+      <Quiz data={questionsData[0]} />
     </div>
+  ) : (
+    ""
   );
 };
 

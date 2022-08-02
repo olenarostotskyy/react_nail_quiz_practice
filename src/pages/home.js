@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import nail_home_video from "../videos/nail_video.mp4";
+// import nail_home_video from "../videos/nail_video.mp4";
 
 import "../App.css";
 import { Button } from "../components/Button";
@@ -24,14 +24,16 @@ const Home = () => {
             TAKE TEST <i className="fas fa-book" />
           </Button>
         </Link>
-        <Button
-          className="btns"
-          buttonStyle="btn--primary"
-          buttonSize="btn--large"
-          onClick={console.log("hey")}
-        >
-          FLASH CARDS <i className="far fa-play-circle" />
-        </Button>
+        <Link to="./quiz">
+          <Button
+            className="btns"
+            buttonStyle="btn--primary"
+            buttonSize="btn--large"
+            onClick={console.log("hey")}
+          >
+            FLASH CARDS <i className="far fa-play-circle" />
+          </Button>
+        </Link>
       </div>
     </div>
   );
