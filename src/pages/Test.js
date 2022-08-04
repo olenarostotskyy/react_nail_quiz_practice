@@ -29,9 +29,10 @@ const Test = () => {
   //     });
   // };
 
+  const handleAnswer = (answer) => {};
   return questionsData !== null ? (
     <div className="test-container">
-      <Quiz data={questionsData[0]} />
+      <Quiz data={questionsData[0]} handleAnswer={handleAnswer} />
     </div>
   ) : (
     ""
