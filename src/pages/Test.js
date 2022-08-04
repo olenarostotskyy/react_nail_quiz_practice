@@ -41,13 +41,17 @@ const Test = () => {
       //increase the score
       setScore(score + 1);
     }
-    if (newIndex >= questionsData.lenght) {
+    if (newIndex >= questionsData.length) {
       setGameEnded(true);
     }
   };
 
   return gameEnded ? (
-    <div>Your score is {score}</div>
+    <div className="score-container">
+      <div className="score-msg-card">
+        <h1 className="score">Your score is {score}</h1>
+      </div>
+    </div>
   ) : questionsData !== null ? (
     <div className="test-container">
       <Quiz data={questionsData[currentIndex]} handleAnswer={handleAnswer} />

@@ -61,10 +61,10 @@ const Quiz = ({
         </div> */}
         </div>
       </div>
-      {/* <div className="buttons">
+      <div className="buttons">
         <button>previous</button>
         <button>next</button>
-      </div> */}
+      </div>
     </div>
   );
 };
