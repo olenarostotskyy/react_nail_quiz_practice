@@ -19,7 +19,20 @@ const Quiz = ({
           {/* <h>question</h> */}
         </div>
         <div className="test-answers-col">
-          <div
+          {shuffledAnswers.map((answer) => (
+            <button
+              className={`${
+                correct_answer === answer
+                  ? "test-answ-correct"
+                  : "test-answ-incorrect"
+              }`}
+              onClick={() => handleAnswer(answer)}
+            >
+              {answer}
+            </button>
+          ))}
+
+          {/* <div
             onClick={() => handleAnswer(shuffledAnswers[0])}
             className="test-answ"
           >
@@ -45,12 +58,13 @@ const Quiz = ({
           >
             {shuffledAnswers[3]}
           </div>
+        </div> */}
         </div>
       </div>
-      <div className="buttons">
+      {/* <div className="buttons">
         <button>previous</button>
         <button>next</button>
-      </div>
+      </div> */}
     </div>
   );
 };
