@@ -10,6 +10,7 @@ const Test = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [gameEnded, setGameEnded] = useState(false);
+  const [showAnwers, setShowAnswers] = useState(false);
 
   // const [index, Updateindex] = useState(0);
   useEffect(() => {
@@ -35,14 +36,33 @@ const Test = () => {
   // };
 
   const handleAnswer = (answer) => {
-    const newIndex = currentIndex + 1;
-    setCurrentIndex(newIndex);
-    if (answer === questionsData[currentIndex].correct_answer) {
-      //increase the score
-      setScore(score + 1);
+    // const newIndex = currentIndex + 1;
+    // setCurrentIndex(newIndex);
+    if (!showAnwers) {
+      //prevent double answers
+      if (answer === questionsData[currentIndex].correct_answer) {
+        //increase the score
+        setScore(score + 1);
+      }
     }
-    if (newIndex >= questionsData.length) {
+    setShowAnswers(true);
+    // if (newIndex >= questionsData.length) {
+    //   setGameEnded(true);
+    // }
+  };
+  const handleNextQuestion = () => {
+    setShowAnswers(false);
+    setCurrentIndex(currentIndex + 1);
+
+    if (currentIndex >= questionsData.length - 1) {
       setGameEnded(true);
+    }
+  };
+
+  const handlePrevQuestion = () => {
+    setShowAnswers(false);
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
     }
   };
 
@@ -54,7 +74,13 @@ const Test = () => {
     </div>
   ) : questionsData !== null ? (
     <div className="test-container">
-      <Quiz data={questionsData[currentIndex]} handleAnswer={handleAnswer} />
+      <Quiz
+        data={questionsData[currentIndex]}
+        showAnswers={showAnwers}
+        handleAnswer={handleAnswer}
+        handleNextQuestion={handleNextQuestion}
+        handlePrevQuestion={handlePrevQuestion}
+      />
     </div>
   ) : (
     <h2 className="loading-msg"> Loading...</h2>

@@ -48,7 +48,7 @@
     margin: 20px;
     padding:50px;
     /* overflow: scroll; */
-    object-fit: contain;
+    /* object-fit: contain; */
     /* display: flex; */
 } 
  .test-answers-col{
@@ -146,4 +146,41 @@
 }
 .answer-button{
   border: 1px red solid;
+}
+
+.buttons{
+  padding: 1%;
+  width: 90%;
+  display: flex;
+  /* border: 1px solid greenyellow; */
+  justify-content: space-between;
+}
+.prv-btn{
+  background: #e8e8e8;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  border: 1px solid #e1cdcd;
+  transition: all .5s;
+  box-shadow: 6px 6px 12px  rgba(118, 114, 114, 0.45), -6px -6px 12px  rgba(0,0,0,0.45);
+
+}
+.prv-btn:hover{
+  box-shadow: -6px -6px 12px  rgba(0,0,0,0.45), 6px 6px 12px  rgba(0,0,0,0.45);
+}
+.nxt-btn{
+  
+  background: #e8e8e8;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  border: 1px solid #e1cdcd;
+  transition: all .5s;
+  box-shadow: 6px 6px 12px  rgba(118, 114, 114, 0.45), -6px -6px 12px  rgba(0,0,0,0.45);
+
+}
+.nxt-btn:hover{
+  box-shadow: -6px -6px 12px  rgba(0,0,0,0.45), 6px 6px 12px  rgba(0,0,0,0.45);
 }
