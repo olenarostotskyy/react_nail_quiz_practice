@@ -17,8 +17,17 @@ const Test = () => {
     fetch(ApiUrl)
       .then((res) => res.json())
       .then((data) => {
-        setQuestions(data);
+        const questions = data.map((question) => ({
+          ...question,
+          answers: [
+            question.correct_answer,
+            ...question.incorrect_answers,
+          ].sort(() => Math.random() - 0, 5),
+        }));
+        setQuestions(questions);
+
         setCurrentIndex(0);
+
         console.log(data);
       });
   }, []);

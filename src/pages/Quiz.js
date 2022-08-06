@@ -6,13 +6,14 @@ const Quiz = ({
   handleAnswer,
   showAnswers,
   handleNextQuestion,
-  data: { question, correct_answer, incorrect_answers },
+  data: { question, correct_answer, answers },
 }) => {
   // const Quiz = () => {
   // console.log("hhhhiiii");
-  const shuffledAnswers = [correct_answer, ...incorrect_answers].sort(
-    () => Math.random() - 0.5
-  );
+
+  // const shuffledAnswers = [correct_answer, ...incorrect_answers].sort(
+  //   () => Math.random() - 0.5
+  // );
 
   console.log(correct_answer);
   return (
@@ -23,7 +24,7 @@ const Quiz = ({
           {/* <h>question</h> */}
         </div>
         <div className="test-answers-col">
-          {shuffledAnswers.map((answer, idx) => {
+          {answers.map((answer, idx) => {
             const classColor = showAnswers
               ? answer === correct_answer
                 ? "test-answ-correct"
