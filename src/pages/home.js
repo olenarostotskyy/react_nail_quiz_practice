@@ -24,14 +24,14 @@ const Home = () => {
             TAKE TEST <i className="fas fa-book" />
           </Button>
         </Link>
-        <Link to="./quiz">
+        <Link to="./sign-up">
           <Button
             className="btns"
             buttonStyle="btn--primary"
             buttonSize="btn--large"
             onClick={console.log("hey")}
           >
-            FLASH CARDS <i className="far fa-play-circle" />
+            SIGN UP <i className="far fa-play-circle" />
           </Button>
         </Link>
       </div>

@@ -1,9 +1,22 @@
 .sign-up-container{
-    display: flex;
+   
     padding: 20px;
     margin: 10px;
 
 }
 .sign-up-form{
+    flex-direction: column;
+    display: flex;
     margin-top: 50px;
+    border: 1px solid red;
+    align-items: center;
+    padding: 12px;
+  
+
+    
+}
+form{
+    font-size: 1em;
+    margin: auto;
+    width: 80%;
 }
