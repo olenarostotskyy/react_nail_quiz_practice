@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./signUp.css";
 import { Form, Button } from "react-bootstrap";
@@ -23,8 +24,8 @@ const SignUp = () => {
 
   return (
     <div className="sign-up-container">
+      <h1>Sign Up</h1>
       <div className="sign-up-form">
-        <h1>Sign Up</h1>
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Username</Form.Label>
@@ -85,6 +86,12 @@ const SignUp = () => {
             <Button as="sub" variant="primary" onClick={submitForm}>
               Sign up
             </Button>
+          </Form.Group>
+          <br></br>
+          <Form.Group>
+            <small>
+              Already have an account?<Link to="/login">Log in</Link>{" "}
+            </small>
           </Form.Group>
         </Form>
       </div>

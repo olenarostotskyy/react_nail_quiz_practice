@@ -163,3 +163,6 @@
       transition: 250ms;
     }
   }
+  .btn-outline{
+    color: aqua;
+  }
