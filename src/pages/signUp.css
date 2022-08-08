@@ -1,6 +1,9 @@
-.sign-up-nav-bar{
+.sign-up-container{
     display: flex;
-    justify-content: right;
-    align-items: right;    
-    height: 100vh;
+    padding: 20px;
+    margin: 10px;
+
+}
+.sign-up-form{
+    margin-top: 50px;
 }
