@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Avatar from "../pictures/avatar.jpeg";
 
 import "./signUp.css";
-import { Form, Button } from "react-bootstrap";
+// import { Form, Button } from "react-bootstrap";
 
 const SignUp = () => {
   const [username, setUsername] = useState("");
@@ -26,7 +27,65 @@ const SignUp = () => {
     <div className="sign-up-container">
       <h1>Sign Up</h1>
       <div className="sign-up-form">
-        <Form>
+        <form className="form">
+          <div className="img-container">
+            <img src={Avatar} alt="Avatar" className="avatar"></img>
+          </div>
+
+          <div className="fields-container">
+            <label className="username">
+              <b>Username</b>
+            </label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              value={username}
+              name="username"
+              onChange={(e) => {
+                setUsername(e.target.value);
+              }}
+              required
+            ></input>
+
+            <label className="password">
+              <b>Password</b>
+            </label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              value={password}
+              name="password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+              required
+            ></input>
+
+            <label className="confirm-password">
+              <b>Confirm password</b>
+            </label>
+            <input
+              type="confirm-password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              name="confirmPassword"
+              onChange={(e) => {
+                setConfirmPassword(e.target.value);
+              }}
+              required
+            ></input>
+
+            <button onClick={submitForm} type="submit">
+              Sign up
+            </button>
+            <div>
+              <small>
+                Already have an account?<Link to="/login">Log in</Link>{" "}
+              </small>
+            </div>
+          </div>
+        </form>
+        {/* <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Username</Form.Label>
             <Form.Control
@@ -93,7 +152,7 @@ const SignUp = () => {
               Already have an account?<Link to="/login">Log in</Link>{" "}
             </small>
           </Form.Group>
-        </Form>
+        </Form> */}
       </div>
     </div>
   );

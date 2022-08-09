@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import "./LoginForm.css";
+import Avatar from "../pictures/avatar.jpeg";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -19,7 +20,51 @@ function LoginForm() {
     <div className="login-container">
       <h1>Log in</h1>
       <div className="login-form">
-        <Form>
+        <form className="form">
+          <div className="img-container">
+            <img src={Avatar} alt="Avatar" className="avatar"></img>
+          </div>
+
+          <div className="fields-container">
+            <label className="username">
+              <b>Username</b>
+            </label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              value={email}
+              name="email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              required
+            ></input>
+
+            <label className="password">
+              <b>Password</b>
+            </label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              value={password}
+              name="password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+              required
+            ></input>
+
+            <button onClick={loginUser} type="submit">
+              Log in
+            </button>
+            <div>
+              <small>
+                Do not have account?<Link to="/sign-up">Create one</Link>{" "}
+              </small>
+            </div>
+          </div>
+        </form>
+        {/* <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control
@@ -59,7 +104,7 @@ function LoginForm() {
               Do not have account?<Link to="/sign-up">Create one</Link>{" "}
             </small>
           </Form.Group>
-        </Form>
+        </Form> */}
       </div>
     </div>
   );
