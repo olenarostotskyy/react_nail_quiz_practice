@@ -19,11 +19,11 @@ const Quiz = ({
   return (
     <div className="quiz-container">
       <div className="answers-row">
-        <div className="test-question">
+        <div className="quiz-question">
           <h1>{question}</h1>
           {/* <h>question</h> */}
         </div>
-        <div className="test-answers-col">
+        <div className="quiz-answers-col">
           {answers.map((answer, idx) => {
             const classColor = showAnswers
               ? answer === correct_answer

@@ -8,11 +8,10 @@ import FlashCards from "./pages/flashCards";
 import SignUp from "./pages/signUp";
 import Footer from "./components/Footer";
 import Test from "./pages/Test";
-import Quiz from "./pages/Quiz";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import Quiz from "./pages/Quiz";
 import LoginForm from "./pages/LoginForm";
-import axios from "axios";
-import { useEffect, useState } from "react";
+// import axios from "axios";
+// import { useEffect, useState } from "react";
 
 function App() {
   // const [usersData, setUser] = useState([]);
@@ -41,7 +40,7 @@ function App() {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/login" element={<LoginForm />} />
             <Route path="/test" element={<Test />} />
-            <Route path="/quiz" element={<Quiz />} />
+            {/* <Route path="/quiz" element={<Quiz />} /> */}
           </Routes>
           <Footer />
         </Router>
