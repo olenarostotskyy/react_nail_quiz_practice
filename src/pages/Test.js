@@ -12,7 +12,6 @@ const Test = () => {
   const [gameEnded, setGameEnded] = useState(false);
   const [showAnwers, setShowAnswers] = useState(false);
 
-  // const [index, Updateindex] = useState(0);
   useEffect(() => {
     fetch(ApiUrl)
       .then((res) => res.json())

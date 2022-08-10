@@ -11,10 +11,24 @@ import Test from "./pages/Test";
 import Quiz from "./pages/Quiz";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LoginForm from "./pages/LoginForm";
-
-// const apiUrl = "http://127.0.0.1:5000/questions";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function App() {
+  // const [usersData, setUser] = useState([]);
+
+  // //post new user
+  // const makeNewUser = (data) => {
+  //   axios
+  //     .post("https://inspirational-board.herokuapp.com/boards", data)
+  //     .then(() => {
+  //       getBoardsFromAPI();
+  //     })
+  //     .catch((error) => {
+  //       console.log("Can't make a new Board.", error);
+  //     });
+  // };
+
   return (
     <div>
       <div className="nav-bar">

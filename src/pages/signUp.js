@@ -9,13 +9,27 @@ const SignUp = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [confirmed_password, setConfirmPassword] = useState("");
 
-  const submitForm = () => {
+  const submitForm = (e) => {
     console.log("Form submitted");
     console.log(username);
-    console.log(email);
+    // console.log(email);
     console.log(password);
+
+    e.preventDefault();
+    const user = { username, password, confirmed_password, email };
+
+    console.log(JSON.stringify(user));
+
+    fetch("http://127.0.0.1:5000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user),
+    }).then(() => {
+      console.log("new user added");
+      console.log(password);
+    });
 
     setUsername("");
     setEmail("");
@@ -46,6 +60,19 @@ const SignUp = () => {
               }}
               required
             ></input>
+            <label className="email">
+              <b>Email</b>
+            </label>
+            <input
+              type="text"
+              placeholder="Enter email"
+              value={email}
+              name="email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              required
+            ></input>
 
             <label className="password">
               <b>Password</b>
@@ -67,7 +94,7 @@ const SignUp = () => {
             <input
               type="confirm-password"
               placeholder="Confirm Password"
-              value={confirmPassword}
+              value={confirmed_password}
               name="confirmPassword"
               onChange={(e) => {
                 setConfirmPassword(e.target.value);
