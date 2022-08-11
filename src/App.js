@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Test from "./pages/Test";
 // import Quiz from "./pages/Quiz";
 import LoginForm from "./pages/LoginForm";
+import Register from "./pages/Register";
 // import axios from "axios";
 // import { useEffect, useState } from "react";
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/login" element={<LoginForm />} />
             <Route path="/test" element={<Test />} />
+            <Route path="/register" element={<Register />} />
             {/* <Route path="/quiz" element={<Quiz />} /> */}
           </Routes>
           <Footer />
