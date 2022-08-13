@@ -7,6 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import axios from "./api/axios";
 import "./Register.css";
+import Avatar from "../pictures/avatar.jpeg";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -117,6 +118,9 @@ const Register = () => {
               {errMsg}
             </p>
             <h1>Register</h1>
+            <div className="img-container">
+              <img src={Avatar} alt="Avatar" className="avatar"></img>
+            </div>
             <form onSubmit={handleSubmit}>
               <label htmlFor="username">
                 Username:

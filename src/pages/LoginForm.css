@@ -127,6 +127,16 @@ button {
 }
 
 
+.img-container {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  img.avatar {
+    width: 20%;
+    border-radius: 50%;
+  }
+
 /* .login-container{
     padding: 20px;
     margin: 10px;

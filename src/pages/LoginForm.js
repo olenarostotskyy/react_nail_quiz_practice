@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect, useContext } from "react";
 import AuthContext from "./context/AuthProvider";
 import "./LoginForm.css";
+import Avatar from "../pictures/avatar.jpeg";
 
 // import axios from "./api/axios";
 // const LOGIN_URL = "/auth";
@@ -43,8 +44,8 @@ const Login = () => {
       console.log(JSON.stringify(response));
       // //console.log(JSON.stringify(response));
 
-      const accessToken = "token";
-      const roles = "response?.data?.roles;";
+      // const accessToken = "token";
+      // const roles = "response?.data?.roles;";
       setAuth.setAuth(username);
       setUser("aa");
       setPwd("");
@@ -89,6 +90,9 @@ const Login = () => {
               {errMsg}
             </p>
             <h1>Sign In</h1>
+            <div className="img-container">
+              <img src={Avatar} alt="Avatar" className="avatar"></img>
+            </div>
             <form onSubmit={handleSubmit}>
               <label htmlFor="username">Username:</label>
               <input
