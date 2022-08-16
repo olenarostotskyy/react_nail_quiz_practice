@@ -11,7 +11,7 @@ const FlashCards = () => {
   const amountEl = useRef();
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:5000/categories").then((res) => {
+    axios.get("https://nail-practicer.herokuapp.com/categories").then((res) => {
       setCategories(res.data);
     });
   }, []);
@@ -27,7 +27,9 @@ const FlashCards = () => {
   function handleSubmit(e) {
     e.preventDefault();
     const url =
-      "http://127.0.0.1:5000/categories/" + categoryEl.current.value + "/cards";
+      "https://nail-practicer.herokuapp.com/categories/" +
+      categoryEl.current.value +
+      "/cards";
     axios
       .get(url, {
         params: {

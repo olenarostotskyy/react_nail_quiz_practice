@@ -38,7 +38,7 @@ const Footer = () => {
         <div className="footer-link-wrapper">
           <div class="footer-link-items">
             <h2>About Us</h2>
-            <Link to="/sign-up">How it works</Link>
+            <Link to="/how-it-works">How it works</Link>
             <Link to="/about">Vision</Link>
           </div>
           <div class="footer-link-items">
@@ -50,11 +50,11 @@ const Footer = () => {
         </div>
         <div className="footer-link-wrapper">
           <div class="footer-link-items">
-            <h2>Videos</h2>
+            <h2>Inspirations</h2>
 
             <Link to="/">Ambassadors</Link>
 
-            <Link to="/">Influencer</Link>
+            <Link to="/influencer">Influencers</Link>
           </div>
           <div class="footer-link-items">
             <h2>Social Media</h2>

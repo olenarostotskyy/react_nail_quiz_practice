@@ -9,7 +9,8 @@ const Profile = ({ data }) => {
   const [lastScore, setLastScore] = useState("");
   const [success, setSuccess] = useState(false);
 
-  const ApiUrl = "http://127.0.0.1:5000/users/" + user.auth[0] + "/score";
+  const ApiUrl =
+    "https://nail-practicer.herokuapp.com/users/" + user.auth[0] + "/score";
   useEffect(() => {
     console.log(user.auth);
     if (user.auth[0] !== "") {
