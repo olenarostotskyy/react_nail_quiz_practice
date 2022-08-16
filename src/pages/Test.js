@@ -4,7 +4,8 @@ import Quiz from "./Quiz";
 import AuthContext from "./../pages/context/AuthProvider";
 // import axios from "axios";
 
-const ApiUrl = "http://127.0.0.1:5000/questions";
+// const ApiUrl = "http://127.0.0.1:5000/questions";
+const ApiUrl = "https://nail-practicer.herokuapp.com/questions";
 
 const Test = () => {
   const [questionsData, setQuestions] = useState(null);
@@ -33,21 +34,7 @@ const Test = () => {
       });
   }, []);
 
-  // const getQuestionsFromAPI = () => {
-  //   axios
-  //     .get("http://127.0.0.1:5000/questions")
-  //     .then((response) => {
-  //       setQuestions(response.data);
-  //       console.log(response);
-  //     })
-  //     .catch((error) => {
-  //       console.log("Can't get questions", error);
-  //     });
-  // };
-
   const handleAnswer = (answer) => {
-    // const newIndex = currentIndex + 1;
-    // setCurrentIndex(newIndex);
     if (!showAnwers) {
       //prevent double answers
       if (answer === questionsData[currentIndex].correct_answer) {
@@ -56,9 +43,6 @@ const Test = () => {
       }
     }
     setShowAnswers(true);
-    // if (newIndex >= questionsData.length) {
-    //   setGameEnded(true);
-    // }
   };
   const handleNextQuestion = () => {
     setShowAnswers(false);
@@ -76,7 +60,8 @@ const Test = () => {
       return;
     }
     console.log("posting again");
-    const url = "http://127.0.0.1:5000/users/" + user.auth[0] + "/score";
+    const url =
+      "https://nail-practicer.herokuapp.com/users/" + user.auth[0] + "/score";
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

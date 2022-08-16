@@ -28,11 +28,14 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = fetch("http://127.0.0.1:5000/users/auth", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
-      })
+      const response = fetch(
+        "https://nail-practicer.herokuapp.com/users/auth",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, password }),
+        }
+      )
         .then((response) => response.json())
         .then((data) => {
           setAuth.setAuth([data.Id, data.username]);
