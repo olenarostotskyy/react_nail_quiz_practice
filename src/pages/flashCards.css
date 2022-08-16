@@ -1,38 +1,25 @@
-/* body {
-    background-color: #C8D0D2;
-    margin: 0;
-  } */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
 
 .flash-cards-page{
-    /* border: 1px solid red; */
-    /* display: flex; */
     width: 100%;
     height: 100%;
     justify-content: center;
     padding: 1rem;
-    /* background-color: rgba(34, 134, 129, 0.4); */
     background: url('../pictures/home_page_img.jpeg') center center/cover no-repeat;
 }  
 
 .flash-cards-page small{
-    /* display: flex;
-    height: 30%;
-    width: 100%;
-    padding: 40px;
-    background-color: red; */
     margin-top: 1,5px;
     font-size: 10px;
 }
 .flash-c-list-container {
-    /* border: 1px solid rgb(21, 0, 255); */
     max-width: 100%;
-    /* margin: 1rem 2rem; */
   }
   
   .flash-c-header {
     border-radius: 15px;
     width: 80%;
-    /* height: 400px; */
     box-shadow: -1px 24px 36px -4px rgba(0,0,0,0.45);
     display: flex;
     flex-direction: column;
@@ -41,19 +28,16 @@
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%,rgba(255, 255, 255, 0.1) 20% );
     justify-content: flex-end;
     align-items: center;
-    /* flex-wrap: wrap; */
     padding: 0 1.5rem;
   }
   
   .flash-c-form-group {
-    /* border: 1px solid rgb(255, 115, 0);   */
     display: flex;
     flex-direction: column;
     margin: 10px;
   }
   
   .flash-c-form-group > label {
-    
     color: rgb(31, 28, 28);
     font-size: 35px;
     margin-bottom: 10px;
@@ -86,7 +70,6 @@
   }
   
   .card {
-    /* border-radius: 15px; */
     justify-content: flex-start;
     padding: 20px;
     background-color: rgba(233, 141, 147, 0.4);

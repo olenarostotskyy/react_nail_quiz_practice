@@ -45,7 +45,7 @@ const Footer = () => {
             <h2>Contact Us</h2>
             <Link to="/contact">Contact</Link>
 
-            <Link to="/">Sponsorships</Link>
+            <Link to="/profile">Sponsorships</Link>
           </div>
         </div>
         <div className="footer-link-wrapper">

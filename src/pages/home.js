@@ -16,7 +16,7 @@ const Home = () => {
         <source src={nail_home_video} type="video/mp4" />
       </video> */}
       <h1>FUTURE AWAITS</h1>
-      <h2>{setAuth?.auth}</h2>
+      {/* <h2>{setAuth?.auth}</h2> */}
       <p>Pick where you want to start</p>
       <div className="home-btns">
         <Link to="./test">

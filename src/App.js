@@ -11,6 +11,7 @@ import Test from "./pages/Test";
 import LoginForm from "./pages/LoginForm";
 import Register from "./pages/Register";
 import Contact from "./pages/Contact";
+import Profile from "./pages/Profile";
 // import axios from "axios";
 // import { useEffect, useState } from "react";
 
@@ -43,6 +44,7 @@ function App() {
             <Route path="/test" element={<Test />} />
             <Route path="/register" element={<Register />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
           <Footer />
         </Router>

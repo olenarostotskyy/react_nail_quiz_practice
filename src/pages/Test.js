@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Test.css";
 import Quiz from "./Quiz";
+import AuthContext from "./../pages/context/AuthProvider";
 // import axios from "axios";
 
 const ApiUrl = "http://127.0.0.1:5000/questions";
@@ -11,6 +12,7 @@ const Test = () => {
   const [score, setScore] = useState(0);
   const [gameEnded, setGameEnded] = useState(false);
   const [showAnwers, setShowAnswers] = useState(false);
+  const user = useContext(AuthContext);
 
   useEffect(() => {
     fetch(ApiUrl)
@@ -64,7 +66,26 @@ const Test = () => {
 
     if (currentIndex >= questionsData.length - 1) {
       setGameEnded(true);
+      PostScore();
     }
+  };
+
+  const PostScore = () => {
+    console.log("posting");
+    if (user[0] === "") {
+      return;
+    }
+    console.log("posting again");
+    const url = "http://127.0.0.1:5000/users/" + user.auth[0] + "/score";
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ score }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   const handlePrevQuestion = () => {
