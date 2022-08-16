@@ -10,16 +10,14 @@
 }  
 
 .flash-cards-page small{
-    margin-top: 1,5px;
+    margin-top:2px;
     font-size: 10px;
 }
-.flash-c-list-container {
-    max-width: 100%;
-  }
+
   
   .flash-c-header {
     border-radius: 15px;
-    width: 80%;
+    width: 60%;
     box-shadow: -1px 24px 36px -4px rgba(0,0,0,0.45);
     display: flex;
     flex-direction: column;
@@ -28,7 +26,7 @@
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%,rgba(255, 255, 255, 0.1) 20% );
     justify-content: flex-end;
     align-items: center;
-    padding: 0 1.5rem;
+    padding: 1.5rem;
   }
   
   .flash-c-form-group {
@@ -70,8 +68,9 @@
   }
   
   .card {
+    font-size: 1.4em;
     justify-content: flex-start;
-    padding: 20px;
+    padding: 40px;
     background-color: rgba(233, 141, 147, 0.4);
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%,rgba(255, 255, 255, 0.1) 20% );
     display: flex;
@@ -112,13 +111,12 @@
   }
   
   .flashcard-options {
-    margin-top: .5rem;
+    margin-top: 2em;
   }
   
   .flashcard-option {
     margin-top: .25rem;
-    color: #555;
-    font-size: .75rem;
+    font-size: 1em;
   }
   
   .flashcard-option:first-child {
